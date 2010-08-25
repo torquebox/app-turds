@@ -1,5 +1,3 @@
-# require 'torquebox-messaging-client'
-require 'torquebox/messaging/task'
 
 class StupidTask < TorqueBox::Messaging::Task
   def do_something(payload)

@@ -8,7 +8,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   config.gem 'activerecord-jdbc-adapter', :lib => 'jdbc_adapter'
-#  config.gem 'torquebox-messaging-tasks'
+  config.gem 'org.torquebox.torquebox-messaging-client'
 
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
