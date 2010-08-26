@@ -1,0 +1,3 @@
+people.watcher:
+  job: PeopleWatcher
+  cron: '*/10 * * * * ?'
