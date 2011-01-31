@@ -1,3 +1,10 @@
+GIT
+  remote: http://github.com/paneq/calendar_date_select.git
+  revision: 8e7ec79435a68665df40b14bd90f47e6ac5e9135
+  branch: rails3test
+  specs:
+    calendar_date_select (1.16.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -38,7 +45,7 @@ GEM
     jdbc-postgres (9.0.801)
     jruby-openssl (0.7.3)
       bouncy-castle-java
-    mail (2.2.14)
+    mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -75,6 +82,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-jdbc-adapter (= 0.9.7)
+  calendar_date_select!
   jdbc-postgres
   jruby-openssl
   org.torquebox.rake-support

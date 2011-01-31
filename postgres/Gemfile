@@ -29,6 +29,7 @@ gem 'rails', '3.0.3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem 'calendar_date_select', :git => 'http://github.com/paneq/calendar_date_select.git', :branch => 'rails3test'
 gem "activerecord-jdbc-adapter", "0.9.7", :require => "jdbc_adapter"
 gem "jdbc-postgres"
 gem "jruby-openssl"
