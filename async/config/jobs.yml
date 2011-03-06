@@ -1,0 +1,7 @@
+people.watcher:
+  job: PeopleWatcher
+  cron: '*/5 * * * * ?'
+
+stupidity:
+  job: StupidJob
+  cron: '*/5 * * * * ?'
