@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  caches_action :index
+
   # GET /posts
   # GET /posts.xml
   def index
@@ -46,6 +48,7 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to(@post, :notice => 'Post was successfully created.') }
         format.xml  { render :xml => @post, :status => :created, :location => @post }
+        expire_action :action => :index
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
@@ -74,10 +77,12 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
+    expire_action :action => :index
 
     respond_to do |format|
       format.html { redirect_to(posts_url) }
       format.xml  { head :ok }
     end
   end
+
 end

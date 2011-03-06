@@ -8,6 +8,12 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Postgres
   class Application < Rails::Application
+
+    config.cache_store = :torque_box_store
+    config.after_initialize do
+      Rails.cache.logger ||= Rails.logger
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

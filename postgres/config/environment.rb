@@ -3,3 +3,5 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
 Postgres::Application.initialize!
+
+Rails.cache.logger ||= Logger.new(STDOUT)
