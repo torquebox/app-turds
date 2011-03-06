@@ -1,0 +1,12 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activesupport (3.0.5)
+    rack (1.2.1)
+
+PLATFORMS
+  java
+
+DEPENDENCIES
+  activesupport
+  rack

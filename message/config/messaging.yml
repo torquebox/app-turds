@@ -1,0 +1,4 @@
+
+/queues/foo: 
+  MyConsumer:
+    concurrency: 2

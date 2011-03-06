@@ -1,0 +1,3 @@
+stupidity:
+  job: StupidJob
+  cron: "*/5 * * * * ?"

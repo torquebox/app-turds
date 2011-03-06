@@ -1,0 +1,5 @@
+web:
+  min: 3
+  max: 6
+messaging: shared
+        
