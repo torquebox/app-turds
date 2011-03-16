@@ -5,6 +5,7 @@ class UpperCaser < TorqueBox::Messaging::MessageProcessor
     @queue = TorqueBox::Messaging::Queue.new '/queues/responses'
   end
   def on_message(word) 
+    puts "Got message: #{word}"
     @queue.publish word.upcase
   end
 end
