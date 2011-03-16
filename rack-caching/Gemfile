@@ -1,5 +1,5 @@
 source "http://rubygems.org"
 gem "rack"
-gem "activesupport"
+gem "activesupport", ">= 3.0.3"
 gem "i18n"
-
+gem "torquebox"
