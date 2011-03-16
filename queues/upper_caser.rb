@@ -1,4 +1,4 @@
-require 'org.torquebox.torquebox-messaging-client'
+require 'torquebox-messaging'
 
 class UpperCaser < TorqueBox::Messaging::MessageProcessor
   def initialize
