@@ -1,0 +1,18 @@
+queues:
+  /queues/rackapp1/local:
+topics:
+  /topics/rackapp1/local:
+
+messaging:
+  /topics/rackapp1/local:
+    Dispatch:
+      concurrency: 1
+  /queues/rackapp1/local:
+    Worker:
+      concurrency: 2
+
+jobs:
+  jobname_listfiles:
+    job: ListFiles
+    cron: '*/5 * * * * ?'
+    desc: Publish a folder listing
