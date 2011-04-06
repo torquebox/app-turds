@@ -1,0 +1,7 @@
+queues:
+  /queues/testing:
+    durable: false
+    
+messaging:
+  /queues/testing: MyHandler  
+
