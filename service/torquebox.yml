@@ -1,0 +1,4 @@
+
+services:
+  Waiter:
+    wait: 10
