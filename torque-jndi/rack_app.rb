@@ -1,10 +1,9 @@
-require 'org.torquebox.torquebox-naming-client'
+require 'torquebox-naming'
 
 class RackApp
   def call(env)
-    global = TorqueBox::Naming[""].to_a.sort.join("\n")
-    local = TorqueBox::Naming["java:"].to_a.sort.join("\n")
-    [200, {'Content-Type' => 'text/plain'}, global+"\n\n"+local ]
+    global = TorqueBox::Naming["jmx/invoker/RMIAdaptor"].to_a.sort.join("\n")
+    [200, {'Content-Type' => 'text/plain'}, global ]
   end
 end
 
