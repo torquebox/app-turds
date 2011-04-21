@@ -8,6 +8,16 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module News
   class Application < Rails::Application
+
+    # Make Rails send log messages to JBoss
+    config.logger = TorqueBox::Logger.new("Rails")
+
+    # Use Infinispan for caching
+    config.cache_store = :torque_box_store
+    config.after_initialize do
+      Rails.cache.logger ||= Rails.logger
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
