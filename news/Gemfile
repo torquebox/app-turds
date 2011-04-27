@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -32,5 +31,4 @@ gem 'rails', '3.0.7'
 gem "activerecord-jdbc-adapter", :require => "arjdbc"
 gem "jdbc-sqlite3"
 gem "jruby-openssl"
-gem "torquebox-rake-support"
 gem "torquebox"
