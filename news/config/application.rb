@@ -13,7 +13,7 @@ module News
     config.logger = TorqueBox::Logger.new("Rails")
 
     # Use Infinispan for caching
-    config.cache_store = :torque_box_store
+    config.cache_store = ActiveSupport::Cache::TorqueBoxStore.new
     config.after_initialize do
       Rails.cache.logger ||= Rails.logger
     end
